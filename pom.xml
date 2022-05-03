@@ -52,7 +52,7 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
-                        <version>1.18.12</version>
+                        <version>1.18.24</version>
 		 <type>jar</type>
 		</dependency>
 		<dependency>
@@ -73,7 +73,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>                                       
+				<configuration> 
+                                        <source>1.8</source>
+                                        <target>1.8</target>                                      
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>
