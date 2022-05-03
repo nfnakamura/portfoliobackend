@@ -15,7 +15,12 @@
 	<description>Portfolio Nahuel Nakamura</description>
 	<properties>
 		<java.version>11</java.version>
+                 <maven.compiler.source>1.8</maven.compiler.source>
+                 <maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
+       
+           
+       
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -49,7 +54,7 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
-                        <version>runtime</version>
+                        <version>1.18.24</version>
 		 <type>jar</type>
 		</dependency>
 		<dependency>
