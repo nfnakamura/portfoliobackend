@@ -26,7 +26,7 @@ public class PersonaController {
  @Autowired
  private IPersonaService persoServ;
     
- @PostMapping("/new/persona")
+ @PostMapping("new/persona")
   public void agregarPersona(@RequestBody Persona pers){
         persoServ.crearPersona(pers);
   }  
@@ -37,13 +37,13 @@ public class PersonaController {
       return persoServ.buscarPersona(id);
   }
 
- @GetMapping("/ver/personas")
+ @GetMapping("ver/personas")
  @ResponseBody
  public List<Persona> verPersonas(){
       return persoServ.verPersonas();
   }
 
- @DeleteMapping("/delete/{id}")
+ @DeleteMapping("delete/{id}")
  public void borrarPersona(@PathVariable Long id){
      persoServ.borrarPersona(id);
  }
@@ -85,26 +85,26 @@ public class PersonaController {
   
  /*About*/
  
- @PatchMapping("/edit/persona/{id}/about")
+ @PatchMapping("edit/persona/{id}/about")
     public void editarAbout(@PathVariable Long id, @RequestBody Persona per){
         persoServ.editarAbout(id, per);
 }
     
  /*Proyecto*/
 
-@PostMapping("/new/persona/{id}/proyecto")
+@PostMapping("new/persona/{id}/proyecto")
 public void agregarProyectoAPersona(@PathVariable Long id, @RequestBody Proyecto proyecto){
     persoServ.crearProyectoDePersona(id, proyecto);
 }
 
-@DeleteMapping("/delete/persona/{id_pers}/proyecto/{id_proy}")
+@DeleteMapping("delete/persona/{id_pers}/proyecto/{id_proy}")
 public void borrarProyectoPersona(@PathVariable Long id_pers,@PathVariable Long id_proy){
     persoServ.eliminarProyectoDePersona(id_pers, id_proy);
 }
 
 /*Habilidad*/
 
-@PostMapping("/new/persona/{id}/habilidad")
+@PostMapping("new/persona/{id}/habilidad")
 public void agregarHabilidadAPersona(@PathVariable Long id, @RequestBody Habilidad habilidad){
     persoServ.crearHabilidadDePersona(id, habilidad);
 }
@@ -116,7 +116,7 @@ public void borrarHabilidadPersona(@PathVariable Long id_pers, @PathVariable Lon
     
 /*Educacion*/
 
-@PostMapping("/new/persona/{id}/educacion")
+@PostMapping("new/persona/{id}/educacion")
 public void agregarEducacionAPersona(@PathVariable Long id, @RequestBody Educacion educacion){
     persoServ.crearEducacionDePersona(id, educacion);    
  }
@@ -128,7 +128,7 @@ public void borrarEducacionDePersona(@PathVariable Long id_pers, @PathVariable L
 
 /*Experiencia*/
 
-@PostMapping("/new/persona/{id}/experiencia")
+@PostMapping("new/persona/{id}/experiencia")
 public void agregarExperienciaAPersona(@PathVariable Long id, @RequestBody Experiencia experiencia){
     persoServ.crearExperienciaDePersona(id, experiencia);
 }
