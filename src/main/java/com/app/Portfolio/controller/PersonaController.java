@@ -9,6 +9,7 @@ import com.app.Portfolio.model.Proyecto;
 import com.app.Portfolio.service.IPersonaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -25,7 +26,8 @@ public class PersonaController {
     
  @Autowired
  private IPersonaService persoServ;
-    
+ 
+ 
  @PostMapping("new/persona")
   public void agregarPersona(@RequestBody Persona pers){
         persoServ.crearPersona(pers);
