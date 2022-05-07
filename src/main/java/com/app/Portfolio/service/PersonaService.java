@@ -92,6 +92,13 @@ public class PersonaService implements IPersonaService{
         persoRepo.save(persona);
     }
     
+    @Override
+    public void editarBanner(Long id, Persona per){
+       Persona persona = persoRepo.findById(id).orElse(null);
+       persona.setBackImage(per.getBackImage());
+       persoRepo.save(persona);
+    }
+    
     
     @Override
     public void crearProyectoDePersona(Long id, Proyecto proyecto) {

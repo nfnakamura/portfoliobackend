@@ -31,6 +31,8 @@ public interface IPersonaService {
     public void editarAbout(Long id, Persona per);
     
     public void editarImagen(Long id, Persona per);    
+    
+    public void editarBanner(Long id, Persona per);
            
     public void crearProyectoDePersona(Long id, Proyecto proyecto);
     
