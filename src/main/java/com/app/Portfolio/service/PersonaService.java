@@ -199,6 +199,8 @@ public class PersonaService implements IPersonaService{
        if(proy.getLink()!="")
        proyecto.setLink(proy.getLink());
        
+       
+       proyRepo.save(proyecto);
        persoRepo.save(persona);
     }
 
