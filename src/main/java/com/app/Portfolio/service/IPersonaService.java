@@ -22,17 +22,18 @@ public interface IPersonaService {
     
     public void editarNombre(Long id, Persona per);
     
-    public void editarApellido(Long id, Persona per);
+      public void editarAbout(Long id, Persona per);
+    
+    /*public void editarApellido(Long id, Persona per);
     
     public void editarTrabajo(Long id, Persona per);
     
-    public void editarUbicacion(Long id, Persona per);
-    
-    public void editarAbout(Long id, Persona per);
+    public void editarUbicacion(Long id, Persona per); 
+  
     
     public void editarImagen(Long id, Persona per);    
     
-    public void editarBanner(Long id, Persona per);
+    public void editarBanner(Long id, Persona per);*/
            
     public void crearProyectoDePersona(Long id, Proyecto proyecto);
     

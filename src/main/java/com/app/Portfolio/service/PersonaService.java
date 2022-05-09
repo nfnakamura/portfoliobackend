@@ -49,7 +49,7 @@ public class PersonaService implements IPersonaService{
         return persoRepo.findById(id).orElse(null);
     } 
     
-    @Override
+   @Override
     public void editarAbout(Long id, Persona per){
         Persona persona = persoRepo.findById(id).orElse(null);
         persona.setAbout(per.getAbout());
@@ -57,13 +57,27 @@ public class PersonaService implements IPersonaService{
     }
     
     
-    @Override
+   @Override
     public void editarNombre(Long id, Persona per) {
        Persona persona = persoRepo.findById(id).orElse(null);
+       
+        if (per.getNombre()!="")
+        persona.setNombre(per.getNombre());
+        if(per.getApellido()!="")
+         persona.setApellido(per.getApellido());
+        if(per.getImage()!="")
+        persona.setImage(per.getImage());
+        if(per.getBackImage()!="")
+         persona.setBackImage(per.getBackImage());    
+        if(per.getPosition()!="");
+        persona.setPosition(per.getPosition());
+        if(per.getUbication()!="")
+         persona.setUbication(per.getUbication());    
+       
        persona.setNombre(per.getNombre());
        persoRepo.save(persona);
     }
-    
+  /*  
     @Override
     public void editarApellido(Long id, Persona per){
         Persona persona = persoRepo.findById(id).orElse(null);
@@ -98,7 +112,7 @@ public class PersonaService implements IPersonaService{
        persona.setBackImage(per.getBackImage());
        persoRepo.save(persona);
     }
-    
+    */
     
     @Override
     public void crearProyectoDePersona(Long id, Proyecto proyecto) {
@@ -210,6 +224,8 @@ public class PersonaService implements IPersonaService{
         persoRepo.save(persona);
         expRepo.deleteById(id_exp);
     }
+
+
 
 
     

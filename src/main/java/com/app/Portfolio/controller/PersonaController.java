@@ -51,44 +51,54 @@ public class PersonaController {
  
  /*Nombre*/
  
- @PatchMapping("edit/persona/{id}/nombre")
+ @PatchMapping("edit/persona/{id}")
     public void editarNombre(@PathVariable Long id, @RequestBody Persona per){
-        persoServ.editarNombre(id, per);
+             
+        persoServ.editarPersona(id, per);       
+            
     }
  
- /*Apellido*/
+    
+    
  
+ /*Apellido*/
+ /*
  @PatchMapping("edit/persona/{id}/apellido")
     public void editarApellido(@PathVariable Long id, @RequestBody Persona per){
         persoServ.editarApellido(id, per);
     }
- 
+ */
  /*Trabajo*/
- 
+ /*
   @PatchMapping("edit/persona/{id}/trabajo")
   public void editarTrabajo(@PathVariable Long id, @RequestBody Persona per){
       persoServ.editarTrabajo(id, per);
   }
- 
+ */
  /*Ubicacion*/
-  
+ /* 
  @PatchMapping("edit/persona/{id}/ubicacion")
   public void editUbicacion(@PathVariable Long id, @RequestBody Persona per){
       persoServ.editarUbicacion(id, per);
   }
-  
+  */
   /*Imagen Perfil*/
-  
+  /*
   @PatchMapping("edit/persona/{id}/imagen")
   public void editImagen(@PathVariable Long id, @RequestBody Persona per){
       persoServ.editarImagen(id, per);
   }
-  
+  */
   /*Banner*/
+    /*
   @PatchMapping("edit/persona/{id}/banner")
    public void editBanner(@PathVariable Long id, @RequestBody Persona per){
        persoServ.editarBanner(id, per);
    }
+   
+  */
+   
+   
  /*About*/
  
  @PatchMapping("edit/persona/{id}/about")
