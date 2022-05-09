@@ -58,7 +58,7 @@ public class PersonaService implements IPersonaService{
     
     
    @Override
-    public void editarNombre(Long id, Persona per) {
+    public void editarPersona(Long id, Persona per) {
        Persona persona = persoRepo.findById(id).orElse(null);
        
         if (per.getNombre()!="")
@@ -74,7 +74,6 @@ public class PersonaService implements IPersonaService{
         if(per.getUbication()!="")
          persona.setUbication(per.getUbication());    
        
-       persona.setNombre(per.getNombre());
        persoRepo.save(persona);
     }
   /*  

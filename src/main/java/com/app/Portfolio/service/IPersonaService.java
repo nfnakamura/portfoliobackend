@@ -20,7 +20,7 @@ public interface IPersonaService {
     
     public Persona buscarPersona (Long id);
     
-    public void editarNombre(Long id, Persona per);
+    public void editarPersona(Long id, Persona per);
     
       public void editarAbout(Long id, Persona per);
     
@@ -28,8 +28,7 @@ public interface IPersonaService {
     
     public void editarTrabajo(Long id, Persona per);
     
-    public void editarUbicacion(Long id, Persona per); 
-  
+    public void editarUbicacion(Long id, Persona per);   
     
     public void editarImagen(Long id, Persona per);    
     
