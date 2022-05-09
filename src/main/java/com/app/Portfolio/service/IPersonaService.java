@@ -21,6 +21,8 @@ public interface IPersonaService {
     public Persona buscarPersona (Long id);
     
     public void editarPersona(Long id, Persona per);
+    
+    public void editarProyecto(Long id, Proyecto proy, Long id_proy);
            
     public void crearProyectoDePersona(Long id, Proyecto proyecto);
     
@@ -37,6 +39,8 @@ public interface IPersonaService {
     public void eliminarEducacionDePersona(Long id_pers, Long id_edu);
   
     public void eliminarExperienciaDePersona(Long id_pers, Long id_exp);
+    
+   
    
     
 }

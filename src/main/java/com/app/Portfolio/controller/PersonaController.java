@@ -63,6 +63,11 @@ public void agregarProyectoAPersona(@PathVariable Long id, @RequestBody Proyecto
     persoServ.crearProyectoDePersona(id, proyecto);
 }
 
+@PatchMapping("edit/persona/{id}/proyecto/{id_proy}")
+public void editarProyecto(@PathVariable Long id, @RequestBody Proyecto proyecto, @PathVariable Long id_proy){
+    persoServ.editarProyecto(id, proyecto, id_proy);
+}
+
 @DeleteMapping("delete/persona/{id_pers}/proyecto/{id_proy}")
 public void borrarProyectoPersona(@PathVariable Long id_pers,@PathVariable Long id_proy){
     persoServ.eliminarProyectoDePersona(id_pers, id_proy);

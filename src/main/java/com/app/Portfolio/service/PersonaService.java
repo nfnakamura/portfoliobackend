@@ -184,6 +184,24 @@ public class PersonaService implements IPersonaService{
         expRepo.deleteById(id_exp);
     }
 
+    @Override
+    public void editarProyecto(Long id, Proyecto proy, Long id_proy) {
+       
+       Persona persona = persoRepo.findById(id).orElse(null);
+       Proyecto proyecto = proyRepo.findById(id).orElse(null);
+       
+       if(proy.getName()!="")
+       proyecto.setName(proy.getName());
+       if(proy.getFormat()!="")
+       proyecto.setFormat(proy.getFormat());
+       if(proy.getDescription()!="")
+       proyecto.setDescription(proy.getDescription());
+       if(proy.getLink()!="")
+       proyecto.setLink(proy.getLink());
+       
+       persoRepo.save(persona);
+    }
+
 
 
 
