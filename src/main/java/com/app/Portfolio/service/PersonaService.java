@@ -188,7 +188,7 @@ public class PersonaService implements IPersonaService{
     public void editarProyecto(Long id, Proyecto proy, Long id_proy) {
        
        Persona persona = persoRepo.findById(id).orElse(null);
-       Proyecto proyecto = proyRepo.findById(id).orElse(null);
+       Proyecto proyecto = proyRepo.findById(id_proy).orElse(null);
        
        if(proy.getName()!="")
        proyecto.setName(proy.getName());
@@ -198,9 +198,8 @@ public class PersonaService implements IPersonaService{
        proyecto.setDescription(proy.getDescription());
        if(proy.getLink()!="")
        proyecto.setLink(proy.getLink());
+             
        
-       
-       proyRepo.save(proyecto);
        persoRepo.save(persona);
     }
 
