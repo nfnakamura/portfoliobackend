@@ -48,14 +48,7 @@ public class PersonaService implements IPersonaService{
     public Persona buscarPersona(Long id) {
         return persoRepo.findById(id).orElse(null);
     } 
-    
-   @Override
-    public void editarAbout(Long id, Persona per){
-        Persona persona = persoRepo.findById(id).orElse(null);
-        persona.setAbout(per.getAbout());
-        persoRepo.save(persona);
-    }
-    
+
     
    @Override
     public void editarPersona(Long id, Persona per) {
@@ -72,46 +65,13 @@ public class PersonaService implements IPersonaService{
         if(per.getPosition()!="");
         persona.setPosition(per.getPosition());
         if(per.getUbication()!="")
-         persona.setUbication(per.getUbication());    
+         persona.setUbication(per.getUbication());
+        if(per.getAbout()!="")
+         persona.setAbout(per.getAbout());
        
        persoRepo.save(persona);
     }
-  /*  
-    @Override
-    public void editarApellido(Long id, Persona per){
-        Persona persona = persoRepo.findById(id).orElse(null);
-        persona.setApellido(per.getApellido());
-        persoRepo.save(persona);
-    }
-    
-    @Override
-    public void editarTrabajo(Long id, Persona per){
-        Persona persona = persoRepo.findById(id).orElse(null);
-        persona.setPosition(per.getPosition());
-        persoRepo.save(persona);
-    }
-    
-    @Override
-    public void editarUbicacion(Long id, Persona per){
-        Persona persona = persoRepo.findById(id).orElse(null);
-        persona.setUbication(per.getUbication());
-        persoRepo.save(persona);
-    }
-    
-    @Override
-    public void editarImagen(Long id, Persona per){
-        Persona persona = persoRepo.findById(id).orElse(null);
-        persona.setImage(per.getImage());
-        persoRepo.save(persona);
-    }
-    
-    @Override
-    public void editarBanner(Long id, Persona per){
-       Persona persona = persoRepo.findById(id).orElse(null);
-       persona.setBackImage(per.getBackImage());
-       persoRepo.save(persona);
-    }
-    */
+ 
     
     @Override
     public void crearProyectoDePersona(Long id, Proyecto proyecto) {

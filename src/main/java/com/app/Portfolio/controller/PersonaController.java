@@ -43,69 +43,19 @@ public class PersonaController {
  public List<Persona> verPersonas(){
       return persoServ.verPersonas();
   }
-
+/*
  @DeleteMapping("delete/{id}")
  public void borrarPersona(@PathVariable Long id){
      persoServ.borrarPersona(id);
  }
- 
- /*Nombre*/
+ */
+ /*Edit Persona*/
  
  @PatchMapping("edit/persona/{id}")
-    public void editarNombre(@PathVariable Long id, @RequestBody Persona per){
-             
-        persoServ.editarPersona(id, per);       
-            
-    }
- 
-    
-    
- 
- /*Apellido*/
- /*
- @PatchMapping("edit/persona/{id}/apellido")
-    public void editarApellido(@PathVariable Long id, @RequestBody Persona per){
-        persoServ.editarApellido(id, per);
-    }
- */
- /*Trabajo*/
- /*
-  @PatchMapping("edit/persona/{id}/trabajo")
-  public void editarTrabajo(@PathVariable Long id, @RequestBody Persona per){
-      persoServ.editarTrabajo(id, per);
-  }
- */
- /*Ubicacion*/
- /* 
- @PatchMapping("edit/persona/{id}/ubicacion")
-  public void editUbicacion(@PathVariable Long id, @RequestBody Persona per){
-      persoServ.editarUbicacion(id, per);
-  }
-  */
-  /*Imagen Perfil*/
-  /*
-  @PatchMapping("edit/persona/{id}/imagen")
-  public void editImagen(@PathVariable Long id, @RequestBody Persona per){
-      persoServ.editarImagen(id, per);
-  }
-  */
-  /*Banner*/
-    /*
-  @PatchMapping("edit/persona/{id}/banner")
-   public void editBanner(@PathVariable Long id, @RequestBody Persona per){
-       persoServ.editarBanner(id, per);
-   }
-   
-  */
-   
-   
- /*About*/
- 
- @PatchMapping("edit/persona/{id}/about")
-    public void editarAbout(@PathVariable Long id, @RequestBody Persona per){
-        persoServ.editarAbout(id, per);
-}
-    
+    public void editarPersona(@PathVariable Long id, @RequestBody Persona per){
+        persoServ.editarPersona(id, per);   
+ }   
+     
  /*Proyecto*/
 
 @PostMapping("new/persona/{id}/proyecto")
