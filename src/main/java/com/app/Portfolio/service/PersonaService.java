@@ -248,6 +248,25 @@ public class PersonaService implements IPersonaService{
 
     @Override
     public void editarEducacion(Long id, Educacion edu, Long id_edu) {
+        Persona persona = persoRepo.findById(id).orElse(null);
+        Educacion educacion = eduRepo.findById(id_edu).orElse(null);
+        
+        if(edu.getSchool()!="")
+            educacion.setSchool(edu.getSchool());
+        if(edu.getCareer()!="")
+            educacion.setCareer(edu.getCareer());
+        if(edu.getImg()!="")
+            educacion.setImg(edu.getImg());
+        if(edu.getTitle()!="")
+            educacion.setTitle(edu.getTitle());
+        if(edu.getStarted()!="")
+            educacion.setStarted(edu.getStarted());
+        if(edu.getEnded()!="")
+            educacion.setEnded(edu.getEnded());
+        
+        persoRepo.save(persona);
+        
+        
       
     }
 
