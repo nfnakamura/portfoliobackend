@@ -222,6 +222,37 @@ public class PersonaService implements IPersonaService{
         
     }
 
+    @Override
+    public void editarExperiencia(Long id, Experiencia exp, Long id_exp) {
+        Persona persona = persoRepo.findById(id).orElse(null);
+        Experiencia experiencia = expRepo.findById(id_exp).orElse(null);
+        
+        if(exp.getPosition()!="")
+            experiencia.setPosition(exp.getPosition());
+        if(exp.getCompany()!="")
+            experiencia.setCompany(exp.getCompany());
+        if(exp.getMode()!="")
+            experiencia.setMode(exp.getMode());
+        if(exp.getStarted()!="")
+            experiencia.setStarted(exp.getStarted());
+        if(exp.getEnded()!="")
+            experiencia.setEnded(exp.getEnded());
+        if(exp.getTimeElapsed()!="")
+            experiencia.setTimeElapsed(exp.getTimeElapsed());
+        if(exp.getImg()!="")
+            experiencia.setImg(exp.getImg());
+        
+        persoRepo.save(persona);
+        
+    }
+
+    @Override
+    public void editarEducacion(Long id, Educacion edu, Long id_edu) {
+      
+    }
+
+    
+    
 
 
 

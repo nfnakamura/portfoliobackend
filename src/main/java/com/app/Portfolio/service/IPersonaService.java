@@ -23,6 +23,10 @@ public interface IPersonaService {
     public void editarPersona(Long id, Persona per);
     
     public void editarProyecto(Long id, Proyecto proy, Long id_proy);
+    
+    public void editarExperiencia(Long id, Experiencia exp, Long id_exp);
+    
+    public void editarEducacion(Long id, Educacion edu, Long id_edu);
            
     public void crearProyectoDePersona(Long id, Proyecto proyecto);
     
