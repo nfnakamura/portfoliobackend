@@ -213,6 +213,10 @@ public class PersonaService implements IPersonaService{
           habilidad.setName(hab.getName());
         if(hab.getProgress()>0 && hab.getProgress()<100)
           habilidad.setProgress(hab.getProgress());
+        if(hab.getValue()!="")
+            habilidad.setValue(hab.getValue());
+        
+        
         
         persoRepo.save(persona);
         
