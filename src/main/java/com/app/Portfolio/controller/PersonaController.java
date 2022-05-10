@@ -78,6 +78,12 @@ public void borrarProyectoPersona(@PathVariable Long id_pers,@PathVariable Long 
 @PostMapping("new/persona/{id}/habilidad")
 public void agregarHabilidadAPersona(@PathVariable Long id, @RequestBody Habilidad habilidad){
     persoServ.crearHabilidadDePersona(id, habilidad);
+    
+}
+
+@PatchMapping("edit/persona/{id}/habilidad/{id_hab}")
+public void editarHablilidad(@PathVariable Long id, @RequestBody Habilidad hab, @PathVariable Long id_hab){
+    persoServ.editarHabilidad(id, hab, id_hab);
 }
 
 @DeleteMapping("delete/persona/{id_pers}/habilidad/{id_hab}")

@@ -26,6 +26,8 @@ public interface IPersonaService {
            
     public void crearProyectoDePersona(Long id, Proyecto proyecto);
     
+    public void editarHabilidad(Long id, Habilidad hab, Long id_hab);
+    
     public void crearHabilidadDePersona(Long id, Habilidad habilidad);
     
     public void crearEducacionDePersona(Long id, Educacion educacion);

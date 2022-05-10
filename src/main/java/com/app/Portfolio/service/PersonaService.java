@@ -203,6 +203,21 @@ public class PersonaService implements IPersonaService{
        persoRepo.save(persona);
     }
 
+    @Override
+    public void editarHabilidad(Long id, Habilidad hab, Long id_hab) {
+       
+        Persona persona = persoRepo.findById(id).orElse(null);
+        Habilidad habilidad= habRepo.findById(id_hab).orElse(null);
+        
+        if(hab.getName()!="")
+          habilidad.setName(hab.getName());
+        if(hab.getProgress()>0 && hab.getProgress()<100)
+          habilidad.setProgress(hab.getProgress());
+        
+        persoRepo.save(persona);
+        
+    }
+
 
 
 
