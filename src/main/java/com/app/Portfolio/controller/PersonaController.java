@@ -98,6 +98,11 @@ public void agregarEducacionAPersona(@PathVariable Long id, @RequestBody Educaci
     persoServ.crearEducacionDePersona(id, educacion);    
  }
 
+@PatchMapping("edit/persona/{id}/educacion/{id_edu}")
+    public void editarEducacion (@PathVariable Long id, @RequestBody Educacion edu, @PathVariable Long id_edu){
+        persoServ.editarEducacion(id, edu, id_edu);
+    }
+
 @DeleteMapping("delete/persona/{id_pers}/educacion/{id_edu}")
 public void borrarEducacionDePersona(@PathVariable Long id_pers, @PathVariable Long id_edu){
     persoServ.eliminarEducacionDePersona(id_pers, id_edu);
@@ -109,6 +114,11 @@ public void borrarEducacionDePersona(@PathVariable Long id_pers, @PathVariable L
 public void agregarExperienciaAPersona(@PathVariable Long id, @RequestBody Experiencia experiencia){
     persoServ.crearExperienciaDePersona(id, experiencia);
 }
+
+@PatchMapping("edit/persona/{id}/experiencia/{id_exp}")
+   public void editarExperiencia(@PathVariable Long id, @RequestBody Experiencia exp, @PathVariable Long id_exp){
+   persoServ.editarExperiencia(id, exp, id_exp);
+   }
 
 @DeleteMapping("delete/persona/{id_pers}/experiencia/{id_exp}")
 public void borrarExperienciaDePersona(@PathVariable Long id_pers, @PathVariable Long id_exp){
